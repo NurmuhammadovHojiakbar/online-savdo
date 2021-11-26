@@ -1,17 +1,17 @@
 import Layout from "../Components/Layout/Layout"
 import Head from "next/head"
 
-const Mijoz = () => {
+const Buyurtma = () => {
     return (
         <>
         <Head>
-            <title>Mijozlar | Online Savdo</title>
+        <title>Buyurtmalar | Online Savdo</title>
         </Head>
         <Layout>
-            <h2>Mijozlar</h2>
+            <h2>Buyurtmalar</h2>
         </Layout>
         </>
     );
 }
  
-export default Mijoz;
+export default Buyurtma;
