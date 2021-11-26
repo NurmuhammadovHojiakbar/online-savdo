@@ -22,7 +22,17 @@
 }
 
 .header button{
-    width: 50%;
+    flex-grow: 1;
+    margin: 0 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
 }
 
 .title{
@@ -42,5 +52,59 @@
     line-height: 16px;
     color: #7b7b8b;
     margin-top: 0;
-    margin-bottom: 44px;
+    margin-bottom: 25px;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+}
+
+.login-form div{
+    display: flex;
+    align-items: center;
+    padding: 17px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    margin-bottom: 12px;
+}
+
+.login-form small{
+    margin-top: -3px;
+}
+
+.login-form input{
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 12px;
+}
+
+.login-form svg{
+    margin-right: 16px;
+}
+
+.login-form button{
+    padding: 18px 25px;
+    border: none;
+    outline: none;
+    background-image: linear-gradient(92.13deg, #2C3E50 0.69%, #405A74 116.89%);
+    border-radius: 10px;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 20px;
+    color: #fff; 
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.login-form button:hover{
+    opacity: 0.9;
+}
+
+.login-form button:active{
+    opacity: 1;
+    transform: scale(0.97);
 }

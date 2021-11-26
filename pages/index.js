@@ -18,8 +18,13 @@ export default function Home() {
       <div className={RegisterStyles.container}>
         <div className={RegisterStyles.content}>
           <header className={RegisterStyles.header}>
-            <button onClick={()=>setLogin(true)}>LogIn</button>
-            <button onClick={()=>setLogin(false)}>SignUp</button>
+            <button className={login && "active"} onClick={()=>setLogin(true)}>LogIn</button>
+            <button className={!login && "active"} onClick={()=>setLogin(false)}>SignUp</button>
+            <style jsx>{`
+              .active{
+                box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+              }
+            `}</style>
           </header>
           {login && <Login />}
           {!login && <SignUp />}
