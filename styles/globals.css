@@ -156,9 +156,12 @@ img{
   margin-right: -24px;
 }
 
-.site-layout__header-icons svg{
+.site-layout__header-icons button{
   cursor: pointer;
   margin-right: 24px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
 }
 
 .site-layout__link-active{
