@@ -4,7 +4,7 @@ import TableStyles from "../../styles/Table.module.css"
 
 const AddMijoz = () => {
 
-    const {setShowModal} = useMijozlar()
+    const {setShowModal,fetched,setFetched} = useMijozlar()
     const nameRef = useRef()
     const phoneNumberRef = useRef()
     const regionRef = useRef()
@@ -33,6 +33,7 @@ const AddMijoz = () => {
         phoneNumberRef.current.value=""
         addressRef.current.value=""
 
+        setFetched(!fetched)
         setShowModal(false)
     }
 

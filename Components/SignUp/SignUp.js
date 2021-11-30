@@ -7,7 +7,7 @@ import { useUserContext } from "../../Contexts/UserContext"
 
 const SignUp = () => {
 
-    const {setCurrentUser} = useUserContext()
+    const {setCurrentUser,fetched,setFetched} = useUserContext()
     const router = useRouter()
     const nameRef = useRef()
     const phoneNumberRef = useRef()
@@ -42,6 +42,7 @@ const SignUp = () => {
         addressRef.current.value=""
         passwordRef.current.value = ""
 
+        setFetched(!fetched)
         router.push("/mijoz")
     }
 

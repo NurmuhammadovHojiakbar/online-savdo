@@ -4,23 +4,23 @@ const MijozlarContext = React.createContext()
 
 export const MijozlarContextProvider = ({children}) => {
 
-    const [mijozlar, setMijozlar] = useState([])
+    const [mijozlar, setMijozlar] = useState(null)
+    const [fetched,setFetched] = useState(true)
     const [showModal, setShowModal] = useState(false)
 
-    useEffect(()=>{
-        async function MijozlarniYuklash(){
-            const res = await fetch("/api/mijozlar")
-            const data = await res.json()
-            setMijozlar(data)
-        }
-        MijozlarniYuklash()
-    },[mijozlar])
+    useEffect(async ()=>{
+        const res = await fetch("/api/mijozlar")
+        const data = await res.json()
+        setMijozlar(data)
+    },[fetched])
 
     const value = {
         mijozlar,
         setMijozlar,
         showModal,
         setShowModal,
+        fetched,
+        setFetched
     }
 
     return (
