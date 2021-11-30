@@ -5,7 +5,7 @@ import MijozlarTable from "../Components/MijozlarTable/MijozlarTable";
 import { useMijozlar } from "../Contexts/MijozlarContext";
 
 const Xabarnoma = () => {
-    const {showModal, setShowModal} = useMijozlar()
+    const {setShowModal} = useMijozlar()
     return (
         <>
         <Head>
