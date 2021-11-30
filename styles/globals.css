@@ -26,7 +26,7 @@ img{
 
 .site-layout{
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
 }
 .site-layout__container{
   flex-grow: 1;

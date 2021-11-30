@@ -14,13 +14,13 @@ export const UserContextProvider = ({children})=>{
             const data = await res.json()
             
             setUsersList(data)
-            if(!currentUser){
+            if(!currentUser && window.localStorage.getItem("user")){
                 setCurrentUser(JSON.parse(window.localStorage.getItem("user")))
             }
         }
 
         GetUsers()
-    })
+    },[usersList])
 
     const values ={
         usersList,

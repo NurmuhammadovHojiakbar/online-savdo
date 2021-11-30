@@ -5,6 +5,7 @@ const MijozlarContext = React.createContext()
 export const MijozlarContextProvider = ({children}) => {
 
     const [mijozlar, setMijozlar] = useState([])
+    const [showModal, setShowModal] = useState(false)
 
     useEffect(()=>{
         async function MijozlarniYuklash(){
@@ -13,11 +14,13 @@ export const MijozlarContextProvider = ({children}) => {
             setMijozlar(data)
         }
         MijozlarniYuklash()
-    })
+    },[mijozlar])
 
     const value = {
         mijozlar,
         setMijozlar,
+        showModal,
+        setShowModal,
     }
 
     return (
