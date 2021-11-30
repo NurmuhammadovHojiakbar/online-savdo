@@ -20,7 +20,7 @@ const AddMijoz = () => {
             manzil: addressRef.current.value,
         }
         
-        fetch('/api/mijozlar', {
+        fetch('https://online-savdo.vercel.app//api/mijozlar', {
             method: 'POST', 
             headers: {'Content-Type': 'application/json',},
             body: JSON.stringify({newMijoz}),

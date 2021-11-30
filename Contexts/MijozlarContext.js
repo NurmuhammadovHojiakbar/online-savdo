@@ -9,7 +9,7 @@ export const MijozlarContextProvider = ({children}) => {
     const [showModal, setShowModal] = useState(false)
 
     useEffect(async ()=>{
-        const res = await fetch("/api/mijozlar")
+        const res = await fetch("https://online-savdo.vercel.app//api/mijozlar")
         const data = await res.json()
         setMijozlar(data)
     },[fetched])

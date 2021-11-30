@@ -10,7 +10,7 @@ export const UserContextProvider = ({children})=>{
     const [error, setError] = useState(false)
 
     useEffect(async()=>{
-        const res = await fetch("/api/users")
+        const res = await fetch("https://online-savdo.vercel.app//api/users")
         const data = await res.json()
         
         setUsersList(data)
