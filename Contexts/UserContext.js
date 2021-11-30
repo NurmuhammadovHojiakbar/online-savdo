@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from "react"
+import {UsersDefault} from "../Data/UsersDefault"
 
 const UserContext = React.createContext()
 
@@ -20,7 +21,7 @@ export const UserContextProvider = ({children})=>{
         }
 
         GetUsers()
-    },[usersList])
+    },[UsersDefault])
 
     const values ={
         usersList,

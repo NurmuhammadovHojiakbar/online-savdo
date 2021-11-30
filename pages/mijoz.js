@@ -4,8 +4,9 @@ import ControlButtons from "../Components/ControlButtons/ControlButtons";
 import MijozlarTable from "../Components/MijozlarTable/MijozlarTable";
 import { useMijozlar } from "../Contexts/MijozlarContext";
 
-const Mijoz = () => {
-    const {setShowModal} = useMijozlar()
+const Mijoz = ({data}) => {
+    const {setShowModal, setMijozlar} = useMijozlar()
+    setMijozlar(data)
     return (
         <>
         <Head>
@@ -20,3 +21,13 @@ const Mijoz = () => {
 }
  
 export default Mijoz;
+
+export async function getStaticProps() {
+    const res = await fetch("http://localhost:3000/api/mijozlar")
+    const data = await res.json()
+    return {
+      props: {
+          data
+      },
+    }
+}
