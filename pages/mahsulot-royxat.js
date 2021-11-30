@@ -9,7 +9,7 @@ const MahsulotRoyxat = () => {
     return (
         <>
         <Head>
-            <title>Mahsulotlar Ro'yxati | Online Savdo</title>
+            <title>Mahsulotlar Ro&apos;yxati | Online Savdo</title>
         </Head>
         <Layout>
             <ControlButtons show={()=>setShowModal(true)} />
