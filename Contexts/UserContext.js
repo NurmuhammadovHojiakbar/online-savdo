@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react"
+import React, { useContext, useEffect, useState } from "react"
 
 const UserContext = React.createContext()
 
@@ -8,6 +8,19 @@ export const UserContextProvider = ({children})=>{
     const [currentUser, setCurrentUser] = useState(null)
     const [error, setError] = useState(false)
 
+    useEffect(()=>{
+        async function GetUsers(){
+            const res = await fetch("/api/users")
+            const data = await res.json()
+            
+            setUsersList(data)
+            if(!currentUser && window.localStorage.getItem("user")){
+                setCurrentUser(JSON.parse(window.localStorage.getItem("user")))
+            }
+        }
+
+        GetUsers()
+    },[usersList])
 
     const values ={
         usersList,

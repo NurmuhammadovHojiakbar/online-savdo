@@ -1,12 +1,20 @@
-import React, { useContext,useState } from "react";
+import React, { useContext,useEffect,useState } from "react";
 
 const MijozlarContext = React.createContext()
 
-
-export const MijozlarContextProvider = ({children,}) => {
+export const MijozlarContextProvider = ({children}) => {
 
     const [mijozlar, setMijozlar] = useState([])
     const [showModal, setShowModal] = useState(false)
+
+    useEffect(()=>{
+        async function MijozlarniYuklash(){
+            const res = await fetch("/api/mijozlar")
+            const data = await res.json()
+            setMijozlar(data)
+        }
+        MijozlarniYuklash()
+    },[mijozlar])
 
     const value = {
         mijozlar,

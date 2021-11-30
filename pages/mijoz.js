@@ -4,9 +4,8 @@ import ControlButtons from "../Components/ControlButtons/ControlButtons";
 import MijozlarTable from "../Components/MijozlarTable/MijozlarTable";
 import { useMijozlar } from "../Contexts/MijozlarContext";
 
-const Mijoz = ({data}) => {
-    const {setShowModal, setMijozlar} = useMijozlar()
-    setMijozlar(data)
+const Mijoz = () => {
+    const {setShowModal} = useMijozlar()
     return (
         <>
         <Head>
@@ -21,13 +20,3 @@ const Mijoz = ({data}) => {
 }
  
 export default Mijoz;
-
-export async function getStaticProps() {
-    const res = await fetch("https://online-savdo.vercel.app/api/mijozlar")
-    const data = await res.json()
-    return {
-      props: {
-          data
-      },
-    }
-}

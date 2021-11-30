@@ -1,23 +1,12 @@
 import Head from 'next/head'
-import { useEffect } from 'react'
 import { useState } from 'react'
 import Login from '../Components/Login/Login'
 import SignUp from '../Components/SignUp/SignUp'
-import { useUserContext } from '../Contexts/UserContext'
 import RegisterStyles from "../styles/Register.module.css"
 
-export default function Home({u}) {
+export default function Home() {
 
   const [login, setLogin] = useState(true)
-  const {setUsersList,currentUser,setCurrentUser} = useUserContext()
-
-  setUsersList(u)
-  
-  useEffect(()=>{
-    if(!currentUser && window.localStorage.getItem("user")){
-      setCurrentUser(JSON.parse(window.localStorage.getItem("user")))
-    }
-  },[])
 
   return (
     <>
@@ -43,15 +32,4 @@ export default function Home({u}) {
       </div>
     </>
   )
-}
-
-export async function getStaticProps() {
-  const res = await fetch("https://online-savdo.vercel.app/api/users")
-  const u = await res.json()
-
-  return {
-    props: {
-        u
-    },
-  }
 }

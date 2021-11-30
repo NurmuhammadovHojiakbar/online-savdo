@@ -25,7 +25,7 @@ const SignUp = () => {
             parol: passwordRef.current.value
         }
         
-        fetch('https://online-savdo.vercel.app/api/users', {
+        fetch('/api/users', {
             method: 'POST', 
             headers: {'Content-Type': 'application/json',},
             body: JSON.stringify({newData}),
