@@ -1,4 +1,4 @@
-import React, { useContext,useEffect,useState } from "react";
+import React, { useContext,useState } from "react";
 import {MijozData} from "../Data/MijozData"
 
 const MijozlarContext = React.createContext()

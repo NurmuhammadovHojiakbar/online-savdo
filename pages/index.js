@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { useEffect } from 'react'
 import { useState } from 'react'
 import Login from '../Components/Login/Login'
 import SignUp from '../Components/SignUp/SignUp'
@@ -12,9 +13,11 @@ export default function Home({u}) {
 
   setUsersList(u)
   
-  if(!currentUser && window.localStorage.getItem("user")){
-    setCurrentUser(JSON.parse(window.localStorage.getItem("user")))
-  }
+  useEffect(()=>{
+    if(!currentUser && window.localStorage.getItem("user")){
+      setCurrentUser(JSON.parse(window.localStorage.getItem("user")))
+    }
+  },[])
 
   return (
     <>
