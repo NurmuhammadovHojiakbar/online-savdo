@@ -1,5 +1,6 @@
 import Layout from "../Components/Layout/Layout"
 import Head from "next/head"
+import ControlButtons from "../Components/ControlButtons/ControlButtons";
 
 const Mijoz = () => {
     return (
@@ -8,7 +9,7 @@ const Mijoz = () => {
             <title>Mijozlar | Online Savdo</title>
         </Head>
         <Layout>
-            <h2>Mijozlar</h2>
+            <ControlButtons />
         </Layout>
         </>
     );

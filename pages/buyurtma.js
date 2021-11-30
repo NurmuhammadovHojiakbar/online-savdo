@@ -1,5 +1,6 @@
 import Layout from "../Components/Layout/Layout"
 import Head from "next/head"
+import ControlButtons from "../Components/ControlButtons/ControlButtons";
 
 const Buyurtma = () => {
     return (
@@ -8,7 +9,7 @@ const Buyurtma = () => {
         <title>Buyurtmalar | Online Savdo</title>
         </Head>
         <Layout>
-            <h2>Buyurtmalar</h2>
+            <ControlButtons />
         </Layout>
         </>
     );

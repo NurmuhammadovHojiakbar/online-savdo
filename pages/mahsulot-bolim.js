@@ -1,5 +1,6 @@
 import Layout from "../Components/Layout/Layout"
 import Head from "next/head"
+import ControlButtons from "../Components/ControlButtons/ControlButtons";
 
 const MahsulotBolim = () => {
     return (
@@ -8,7 +9,7 @@ const MahsulotBolim = () => {
             <title>Mahsulotlar Bolimi | Online Savdo</title>
         </Head>
         <Layout>
-            <h2>Mahsulotlar Bolimi</h2>
+            <ControlButtons />
         </Layout>
         </>
     );

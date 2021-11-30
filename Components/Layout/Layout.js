@@ -7,7 +7,7 @@ const Layout = ({children}) => {
             <Navbar />
             <div className={"site-layout__container"}>
                 <Header />
-                { children }
+                <div className={"site-layout__container-main"}>{ children }</div>
             </div>
         </div>
     );

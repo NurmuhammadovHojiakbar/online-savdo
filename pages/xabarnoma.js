@@ -1,5 +1,6 @@
 import Layout from "../Components/Layout/Layout"
 import Head from "next/head"
+import ControlButtons from "../Components/ControlButtons/ControlButtons";
 
 const Xabarnoma = () => {
     return (
@@ -8,7 +9,7 @@ const Xabarnoma = () => {
             <title>Xabarnoma | Online Savdo</title>
         </Head>
         <Layout>
-            <h2>SMS Xabarnoma</h2>
+            <ControlButtons />
         </Layout>
         </>
     );

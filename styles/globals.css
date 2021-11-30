@@ -31,6 +31,9 @@ img{
 .site-layout__container{
   flex-grow: 1;
 }
+.site-layout__container-main{
+  padding: 50px 60px;
+}
 
 .site-layout nav{
   max-width: 320px;
