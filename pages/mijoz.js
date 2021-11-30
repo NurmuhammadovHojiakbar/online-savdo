@@ -23,7 +23,7 @@ const Mijoz = ({data}) => {
 export default Mijoz;
 
 export async function getStaticProps() {
-    const res = await fetch("http://localhost:3000/api/mijozlar")
+    const res = await fetch("https://online-savdo.vercel.app/api/mijozlar")
     const data = await res.json()
     return {
       props: {
