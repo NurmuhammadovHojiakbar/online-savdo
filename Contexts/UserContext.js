@@ -1,5 +1,4 @@
 import React, { useContext, useState } from "react"
-import {UsersDefault} from "../Data/UsersDefault"
 
 const UserContext = React.createContext()
 
